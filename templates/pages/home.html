@@ -5,6 +5,39 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Welcome to the Home Page</h1>
-<p>This is the content of the home page.</p>
+
+<!-- INTRO -->
+			<div class="section">
+				<div class="container">
+
+					<div class="text-center max-w-800 mx-auto py-5">
+
+						<h1 class="display-4 fw-bold text-muted">
+							<span class="d-inline-block text-align-start">
+								
+								<span class="d-block fs-6">
+									Welcome to the Home Page
+								</span>
+
+								Content <span class="text-primary">of the home page</span>
+
+							</span>
+						</h1>
+
+
+						<form method="get" action="#" class="input-group-over d-block mb-2 max-w-500 mx-auto mt-5 form-control-pill">
+
+							<input required placeholder="Help center search..." name="keywords" type="text" class="form-control form-control-lg">
+
+							<button type="submit" class="btn btn-lg rounded-circle position-absolute smaller">
+								<i class="fi fi-search m-0"></i>
+							</button>
+
+						</form>
+
+					</div>
+
+				</div>
+			</div>
+			<!-- /INTRO -->
 {% endblock %}
