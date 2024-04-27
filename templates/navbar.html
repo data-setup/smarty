@@ -81,24 +81,18 @@
         <!-- OPTIONS -->
         <ul class="list-inline list-unstyled mb-0 d-flex align-items-end">
             <li class="list-inline-item mx-1 dropdown">
-                <a
-                    href="#"
-                    aria-label="Account Sign In"
-                    class="js-ajax-modal btn btn-sm btn-primary btn-pill"
-                    data-href="_ajax/modal_signin.html"
-                    data-ajax-modal-size="modal-md"
-                    data-ajax-modal-centered="true"
-                    data-ajax-modal-backdrop="static"
-                >
-                    <span class="group-icon">
-                        <i class="fi fi-user-male"></i>
-                        <i class="fi fi-close"></i>
-                    </span>
-                    <span>Account</span>
+              {% if user.is_authenticated == False %}
+                <a href="{% url 'account_login' %}">
+                  <span class="group-icon">
+										<i class="fi fi-user-male"></i>
+										<i class="fi fi-close"></i>
+									</span> 
+									<span>Account</span>
                 </a>
-
+                {% endif %}
+                {% if user.is_authenticated %}
                 <!-- ALREADY SIGNED IN -->
-                <!--
+                
 								<a href="#" aria-label="Account Options" id="dropdownAccountOptions" class="btn btn-sm btn-primary btn-pill" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
 									<span class="group-icon">
 										<i class="fi fi-user-male"></i>
@@ -178,7 +172,7 @@
                     Log Out
                   </a>
                 </div>
-								-->
+								{% endif %}
             </li>
         </ul>
         <!-- /OPTIONS -->
