@@ -87,7 +87,7 @@
 										<i class="fi fi-user-male"></i>
 										<i class="fi fi-close"></i>
 									</span> 
-									<span>Account</span>
+									<span>Log in</span>
                 </a>
                 {% endif %}
                 {% if user.is_authenticated %}
@@ -167,7 +167,7 @@
                     <span>Account settings</span>
                   </a>
                   <div class="dropdown-divider mt-3"></div>
-                  <a href="#" title="Log Out" class="dropdown-item mt-1">
+                  <a href="{% url 'account_logout' %}" title="Log Out" class="dropdown-item mt-1">
                     <i class="fi fi-power float-start"></i>
                     Log Out
                   </a>
